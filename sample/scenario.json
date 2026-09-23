@@ -1,0 +1,16 @@
+{
+  "nodes": ["n1", "n2", "n3"],
+  "script": [
+    {"op": "tick", "rounds": 3},
+    {"op": "append", "command": "set x=1"},
+    {"op": "tick", "rounds": 1},
+    {"op": "append", "command": "set y=2"},
+    {"op": "tick", "rounds": 1},
+    {"op": "partition", "groups": [["n1"], ["n2", "n3"]]},
+    {"op": "tick", "rounds": 4},
+    {"op": "append", "command": "set z=3"},
+    {"op": "tick", "rounds": 1},
+    {"op": "heal"},
+    {"op": "tick", "rounds": 4}
+  ]
+}
